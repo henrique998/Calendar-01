@@ -1,0 +1,82 @@
+.calendar-container {
+  border: 1px solid var(--gray-light);
+  border-radius: 8px;
+
+  padding: 1.5rem;
+
+  > header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    h1 {
+      font-size: 1.25rem;
+      color: var(--primary);
+      font-weight: 700;
+    }
+  }
+}
+
+.header-button {
+  width: 2rem;
+  height: 2rem;
+
+  border: 1px solid var(--gray-light);
+  border-radius: 8px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transition: filter 0.2s;
+
+  &:hover {
+    filter: brightness(0.85);
+  }
+}
+
+.calendar-content {
+  margin-top: 1.5rem;
+
+  header {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    justify-content: space-between;
+    gap: 0.625rem;
+
+    span {
+      font-size: 0.875rem;
+      font-weight: 500;
+      color: var(--gray);
+      text-align: center;
+    }
+  }
+}
+
+.days-container {
+  margin-top: 1.25rem;
+
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  justify-content: space-between;
+  gap: 0.625rem;
+}
+
+.day {
+  text-align: center;
+
+  border-radius: 8px;
+  padding: 0.5rem 0.75rem;
+  font-size: 0.875rem;
+
+  color: var(--primary);
+
+  &.other-month {
+    color: var(--gray);
+  }
+
+  &.selected {
+    background-color: var(--primary);
+    color: var(--white);
+  }
+}
